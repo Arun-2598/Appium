@@ -4,8 +4,13 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+
+import com.google.common.collect.ImmutableMap;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
@@ -24,22 +29,34 @@ public class BasicClass {
 		server = new AppiumServiceBuilder()
 				.withAppiumJS(new File(
 						"C:\\Users\\arun.kumar\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withIPAddress("192.168.4.19").usingPort(4723).build();
+				.withIPAddress("192.168.4.130").usingPort(4723).build();
 		server.start();
 
 		// 2. Setting up the Device(Simulator) Name and Apps
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("ArunSimulator");
+		options.setChromedriverExecutable("C:\\Users\\arun.kumar\\eclipse-workspace\\Appium\\chromedriver.exe");
 		options.setApp("C:\\Users\\arun.kumar\\eclipse-workspace\\Appium\\General-Store.apk");
 
 		// 3. Setting up the IP Address and Port
-		driver = new AndroidDriver(new URL("http://192.168.4.19:4723"), options);
+		driver = new AndroidDriver(new URL("http://192.168.4.130:4723"), options);
+	}
+	
+	
+	public void LongPressAction(WebElement element) {
+		((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",ImmutableMap.of(
+				"elementId", ((RemoteWebElement) element).getId(),
+				"duration", 4000));
 	}
 	
 	public void Scroll_On_Exact_Point(String TEXT) {
 		driver.findElement(AppiumBy
 				.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + TEXT + "\"));"));
 
+	}
+	
+	public void Waits(int value) throws InterruptedException {
+		Thread.sleep(value);
 	}
 	
 //	@AfterClass

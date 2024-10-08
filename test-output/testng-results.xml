@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-27T15:08:47Z" name="Default suite" finished-at="2024-09-27T15:10:01Z" duration-ms="73748">
+  <suite started-at="2024-10-08T13:30:33Z" name="Default suite" finished-at="2024-10-08T13:31:03Z" duration-ms="29854">
     <groups>
     </groups>
-    <test started-at="2024-09-27T15:08:47Z" name="Default test" finished-at="2024-09-27T15:10:01Z" duration-ms="73748">
-      <class name="Ecomm_App_practice.Ecomm_TC_2">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:Ecomm_App_practice.Ecomm_TC_2@385e9564]" started-at="2024-09-27T20:38:47Z" name="ConfigureAppium" finished-at="2024-09-27T20:39:00Z" duration-ms="12966" status="PASS">
+    <test started-at="2024-10-08T13:30:33Z" name="Default test" finished-at="2024-10-08T13:31:03Z" duration-ms="29854">
+      <class name="Browser_Automation.Browser_BaseClass">
+        <test-method is-config="true" signature="BrowserBasics()[pri:0, instance:Browser_Automation.Browser_BaseClass@50eac852]" started-at="2024-10-08T19:00:33Z" name="BrowserBasics" finished-at="2024-10-08T19:00:58Z" duration-ms="25621" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ConfigureAppium -->
-        <test-method signature="General_Store_App()[pri:0, instance:Ecomm_App_practice.Ecomm_TC_2@385e9564]" started-at="2024-09-27T20:39:00Z" name="General_Store_App" finished-at="2024-09-27T20:40:01Z" duration-ms="60593" status="PASS">
+        </test-method> <!-- BrowserBasics -->
+        <test-method signature="Browser_Test()[pri:0, instance:Browser_Automation.Browser_BaseClass@50eac852]" started-at="2024-10-08T19:00:58Z" name="Browser_Test" finished-at="2024-10-08T19:01:03Z" duration-ms="4219" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- General_Store_App -->
-      </class> <!-- Ecomm_App_practice.Ecomm_TC_2 -->
+        </test-method> <!-- Browser_Test -->
+      </class> <!-- Browser_Automation.Browser_BaseClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
