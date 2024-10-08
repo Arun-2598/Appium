@@ -20,10 +20,10 @@ public class DragandDrop extends BasicClass {
 
 		driver.findElement(AppiumBy.accessibilityId("Drag and Drop")).click();
 
-		WebElement Source = driver.findElement(By.id("io.appium.android.apis:id/drag_dot_1"));
+		WebElement source = driver.findElement(By.id("io.appium.android.apis:id/drag_dot_1"));
 
 		driver.executeScript("mobile: dragGesture",ImmutableMap.of(
-		"elementId", ((RemoteWebElement) Source).getId(), 
+		"elementId", ((RemoteWebElement) source).getId(), 
 		"endX", 652,
 		"endY", 574));
 

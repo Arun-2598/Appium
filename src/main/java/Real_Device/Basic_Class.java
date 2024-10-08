@@ -23,18 +23,18 @@ public class Basic_Class {
 		server = new AppiumServiceBuilder()
 				.withAppiumJS(new File(
 						"C:\\Users\\arun.kumar\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withIPAddress("192.168.4.19").usingPort(4723).build();
+				.withIPAddress("192.168.4.130").usingPort(4723).build();
 		server.start();
 
 		// 2. Setting up the Device(Simulator) Name and Apps
 		UiAutomator2Options options = new UiAutomator2Options();
 	//	options.setDeviceName("ArunSimulator");
 		
-		options.setDeviceName("Android Device");
+		options.setDeviceName("Android Device"); // real device
 		options.setApp("C:\\Users\\arun.kumar\\eclipse-workspace\\Appium\\General-Store.apk");
 
 		// 3. Setting up the IP Address and Port
-		driver = new AndroidDriver(new URL("http://192.168.4.19:4723"), options);
+		driver = new AndroidDriver(new URL("http://192.168.4.130:4723"), options);
 	}
 	
 //	@AfterClass
