@@ -2,20 +2,24 @@
 <testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-08T13:30:33Z" name="Default suite" finished-at="2024-10-08T13:31:03Z" duration-ms="29854">
+  <suite started-at="2024-10-11T07:41:04Z" name="Default suite" finished-at="2024-10-11T07:41:32Z" duration-ms="27601">
     <groups>
     </groups>
-    <test started-at="2024-10-08T13:30:33Z" name="Default test" finished-at="2024-10-08T13:31:03Z" duration-ms="29854">
-      <class name="Browser_Automation.Browser_BaseClass">
-        <test-method is-config="true" signature="BrowserBasics()[pri:0, instance:Browser_Automation.Browser_BaseClass@50eac852]" started-at="2024-10-08T19:00:33Z" name="BrowserBasics" finished-at="2024-10-08T19:00:58Z" duration-ms="25621" status="PASS">
+    <test started-at="2024-10-11T07:41:04Z" name="Default test" finished-at="2024-10-11T07:41:32Z" duration-ms="27601">
+      <class name="LearnMobileTesting.Appium.App_Package_and_Activity">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:LearnMobileTesting.Appium.App_Package_and_Activity@20ce78ec]" started-at="2024-10-11T13:11:04Z" name="ConfigureAppium" finished-at="2024-10-11T13:11:17Z" duration-ms="12773" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BrowserBasics -->
-        <test-method signature="Browser_Test()[pri:0, instance:Browser_Automation.Browser_BaseClass@50eac852]" started-at="2024-10-08T19:00:58Z" name="Browser_Test" finished-at="2024-10-08T19:01:03Z" duration-ms="4219" status="PASS">
+        </test-method> <!-- ConfigureAppium -->
+        <test-method signature="Miscellanous()[pri:0, instance:LearnMobileTesting.Appium.App_Package_and_Activity@20ce78ec]" started-at="2024-10-11T13:11:17Z" name="Miscellanous" finished-at="2024-10-11T13:11:27Z" duration-ms="9454" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Browser_Test -->
-      </class> <!-- Browser_Automation.Browser_BaseClass -->
+        </test-method> <!-- Miscellanous -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:LearnMobileTesting.Appium.App_Package_and_Activity@20ce78ec]" started-at="2024-10-11T13:11:27Z" name="TearDown" finished-at="2024-10-11T13:11:32Z" duration-ms="5358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- LearnMobileTesting.Appium.App_Package_and_Activity -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

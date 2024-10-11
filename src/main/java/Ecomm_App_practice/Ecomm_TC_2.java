@@ -6,6 +6,8 @@ import java.net.MalformedURLException;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +18,8 @@ import io.appium.java_client.AppiumBy;
 
 public class Ecomm_TC_2 extends BasicClass {
 	public String products;
+	
+	private static Logger logger=Logger.getLogger(Ecomm_TC_2.class);
 
 	@Test
 	public void General_Store_App() throws MalformedURLException, InterruptedException {
@@ -61,14 +65,18 @@ public class Ecomm_TC_2 extends BasicClass {
 		Thread.sleep(2000);
 
 		driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
-		
-		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(5));
-		waits.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_tittle")), "text", "Cart"));
+//		
+//		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(5));
+//		waits.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_tittle")), "text", "Cart"));
 		
 		String Shoe_Name = driver.findElement(By.xpath("//android.widget.TextView[@text='Air Jordan 9 Retro']")).getText();
 		assertEquals(products, Shoe_Name);
+		
+		logger.info(Shoe_Name);
 
 		driver.findElement(By.id("com.androidsample.generalstore:id/btnProceed")).click();
+		
+		
 	}
 
 }

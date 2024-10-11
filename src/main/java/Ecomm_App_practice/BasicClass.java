@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -52,6 +53,11 @@ public class BasicClass {
 	public void Scroll_On_Exact_Point(String TEXT) {
 		driver.findElement(AppiumBy
 				.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + TEXT + "\"));"));
+
+	}
+	
+	public void propertyy() {
+		PropertyConfigurator.configure("C:\\Users\\arun.kumar\\eclipse-workspace\\Appium\\log4j.properties");
 
 	}
 	

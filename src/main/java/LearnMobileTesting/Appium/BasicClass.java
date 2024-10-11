@@ -29,7 +29,7 @@ public class BasicClass {
 		server = new AppiumServiceBuilder()
 				.withAppiumJS(new File(
 						"C:\\Users\\arun.kumar\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withIPAddress("192.168.4.19").usingPort(4723).build();
+				.withIPAddress("192.168.116.45").usingPort(4723).build();
 		server.start();
 
 		// 2. Setting up the Device(Simulator) Name and Apps
@@ -38,7 +38,7 @@ public class BasicClass {
 		options.setApp("C:\\Users\\arun.kumar\\eclipse-workspace\\Appium\\ApiDemos-debug.apk");
 
 		// 3. Setting up the IP Address and Port
-		driver = new AndroidDriver(new URL("http://192.168.4.19:4723"), options);
+		driver = new AndroidDriver(new URL("http://192.168.116.45:4723"), options);
 	}
 
 	public void LongPressAction(WebElement element) {
